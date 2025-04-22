@@ -26,3 +26,11 @@ jobs:
         BRANCH: main
         FOLDER: deploy
         SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_KEY_FOR_DEPLOY_TEST_REPO }}
+
+  keepalive:
+    #if: github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+    steps:
+      - uses: abitmore/gh-workflow-keepalive@dev
