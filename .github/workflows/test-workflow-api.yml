@@ -20,4 +20,4 @@ jobs:
     permissions:
       actions: write
     steps:
-      - uses: abitmore/gh-workflow-keepalive@main
+      - uses: abitmore/gh-workflow-keepalive@dev
